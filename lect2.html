@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="All-lect.css">
+
+    <!--Bootstarp 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Tagesschrift&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+
+
+</head>
+<body>
+    <div class="container-fluid header-color fixed-top nav-bar">
+        <nav>
+            
+            <ul id="header">
+                <li><img src="PORTFOLIO.png" alt="Portfolio Logo" id="logo"></li>
+                
+                <li id="nav-button"><a href="">HOME</a></li>
+                <li id="nav-button">
+                    <a href="#">PRELIMS</a>
+                    <div class="dropdown-content1">
+                        <a href="lectureIndex.html">Lecture</a>
+                        <a href="#">Activities</a>
+                    </div>
+                </li>
+                
+                <li id="nav-button">
+                    <a href="#">MIDTERMS</a>
+                    <div class="dropdown-content1">
+                        <a href="#">Lecture</a>
+                        <a href="#">Activities</a>
+                    </div>
+                </li>
+                
+                <li id="nav-button">
+                    <a href="#">FINALS</a>
+                    <div class="dropdown-content1">
+                        <a href="#">Lecture</a>
+                        <a href="#">Activities</a>
+                    </div>
+                </li>
+                <li id="nav-button">
+                    <a href="#">FINAL PROJECT</a>
+                    <div class="dropdown-content1">
+                        <a href="#">Lecture</a>
+                        <a href="#">Activities</a>
+                    </div>
+                </li>
+                <li id="nav-button">
+                    <a href="">ABOUT ME</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.querySelector("nav");
+      
+        window.addEventListener("scroll", () => {
+          const currentScrollPos = window.pageYOffset;
+      
+          if (currentScrollPos > prevScrollPos) {
+            // Scrolling down
+            navbar.classList.add("hide-nav");
+          } else {
+            // Scrolling up
+            navbar.classList.remove("hide-nav");
+          }
+      
+          prevScrollPos = currentScrollPos;
+        });
+      </script>
+
+    <div class="empty-space"></div>
+
+    <!--lecture-->
+    <div class="container-fluid w-75 p-0">
+        <div class="container-fluid background-color border-design">
+            <h1 class="lecture-header">LECTURE 2 - HTML Structures</h1>
+        </div>
+    </div>
+    <div class="empty-space1"></div>
+
+    <div class="container-fluid mt-8 p-0">
+       <div class="container-fluid w-75 p-4 border-design background-color font-responsive">
+            <p> Before you start creating websites...</p>
+            <ul class="bold-letters">
+                <li>You must first ask these questions:</li>
+                <ul class="sublist">
+                    <li>What are the tools the professional use?</li>    
+                    <li>What will my website look like?</li>
+                    <li>What are the important files that I should have?</li>
+                </ul>
+            </ul>
+
+            <ul class="list">
+                <li class="bold-letters">What Professional Use?</li>
+                <ul>
+                    <li>A Computer.</li>
+                    <li>Text Editor, to write the code in.</li>
+                    <li>Web Browsers, to test the code in.</li>
+                    <li>Graphing Editing Software to make and edit the graphics on your web pages. Ex: Gimp, Figma, Photoshop</li>
+                    <li>Version Control System, to manage files on Servers. Ex: GitHub, GitLab</li>
+                    <li>FTP program, for older version or old web hosting account to manage file on servers (optional, because Git is increasingly replacing FTP) Ex: Cyberduck, FileZilla</li>
+                    <li>Automation System to autamatically perform repetitive tasks such as running tests.</li>
+                    <li>Libraries, frameworks... etc.</li>
+                </ul>
+            </ul>
+
+            <ul class="list">
+                <li class="bold-letters">What you need to prepare?</li>
+                <ul>
+                    <li class="bold-letters">Computer <span class="normal-letters">- Any Specs will do, but for serious web development, be sure to invest on your computer.</span></li>
+                    <li class="bold-letters">Text Editor <span class="normal-letters">-  Default Notepad, but you can start with <a href="#">Notepad++</a></span></li>
+                    <li class="bold-letters">Web Browser <span class="normal-letters">- Chrome, Firefox, Opera, Microsoft Edge, Safari, Brave</span></li>
+                </ul>
+            </ul>
+
+            <ul class="list">
+                <li class="bold-letters">What will my website looks like?</li>
+                <ul>
+                    <li>Web Design Principle: Plan Your Site Before You Build It.</li>
+                    <li>Clearly Define your site's purpose.</li>
+                    <li>Consider your audience.</li>
+                    <li>Decide what your site needs to be a success.</li>
+                    <li>Study sites of similar purpose.</li>
+                    <li>Storyboard your site before you construct it.</li>
+                    <li>Storyboard your site before you construct it.</li>
+                </ul>
+            </ul>
+
+            <ul class="list">
+                <li class="bold-letters">What are the important files and folders I need to have?</li>
+                <li>The basic structure of your website FOLDER should have at least the following:</li>
+                <ul>
+                    <li class="bold-letters">index.html<span class="normal-letters"> (your homepage content goes here)</span></li>
+                    <li class="bold-letters">images<span class="normal-letters"> folder</span></li>
+                    <li class="bold-letters">styles<span class="normal-letters"> folder</span></li>
+                    <li class="bold-letters">scripts<span class="normal-letters"> folder</span></li>
+                </ul>
+            </ul>
+
+            <h1 class="bold-letters topic-header center-text mb-5 mt-5">Introduction to Web Development</h1>
+            <h1 class="bold-letters topic-header">Timeline of HTML</h1>
+            <ul>
+                <li class="bold-letters">1991<span class="normal-letters"> - HTML first published.</span></li>
+                <li class="bold-letters">1995<span class="normal-letters"> - HTML 2.0 published.</span></li>
+                <li class="bold-letters">1997<span class="normal-letters"> - HTML 3.2 published.</span></li>
+                <li class="bold-letters">1999<span class="normal-letters"> - HTML 4.01 published.</span></li>
+                <ul>
+                    <li>After HTML 4.01 was released, focus shifted on XHTML and its stricter standrads.</li>
+                </ul>
+                <li class="bold-letters">2000<span class="normal-letters"> - XHTML 1.0 published.</span></li>
+                <li class="bold-letters">2002<span class="normal-letters"> - XHTML 2.0 published.</li>
+                <ul>
+                    <li>XXHTML 2.0 had even stricter standards than 1.0, rejecting web pages that did not comply. It fell out of favor gradually and was abandones completely in 2009.</li>
+                </ul>
+            </ul>
+            <h1 class="bold-letters topic-header">What is HTML</h1>
+            <ul>
+                <li class="bold-letters">HTML (Hypertext Markup Language)<span class="normal-letters">is not a programming language. It is a</span> markup language<span class="normal-letters">
+                    that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. 
+                </span></li>
+            </ul>
+
+            <h1 class="bold-letters topic-header">What is HTML5?</h1>
+            <ul>
+                <li>HTML5 is the newest version of HTML, only recently gaining partial support by the makers of web browsers.</li>
+                <li>It incorporates all features from earlier versions of HTML, including the stricter XHTML.</li>
+                <li>It adds a diverse set of new tools for the web developer to use.</li>
+                <li>It is still a work in progress. No browsers have full HTML5 support. It will be many years - perhaps not until
+                    2018 or later - before being fully defined and supported.</li>
+            </ul>
+
+            <p class="bold-letters topic-header">Goals of HTML5</p>
+            <ul>
+                <li>Support all existing web pages. With HTML5, there is no requirement to go back and revise older websites.</li>
+                <li>Reduce the need for external plugin and scripts to show website content.</li>
+                <li>Improve the semantic definition (i.e. meaning and purpose) of page elements.</li>
+                <li>Make the rendering of web content universal and independent of the device being used.</li>
+                <li>Handle web documents errors in a better and more consistent fashion.</li>
+            </ul>
+
+            <h1 class="bold-letters topic-header">New Elements in HTML5</h1>
+            <div class="table-elements">
+                <table>
+                    <tr class="row-border">
+                        <th class="col">&lt;article&gt;</th>
+                        <th class="col">&lt;figcaption&gt;</th>
+                        <th class="col">&lt;progress&gt;</th>
+                    </tr>
+                    <tr class="row-border">
+                        <th class="col">&lt;aside&gt;</th>
+                        <th class="col">&lt;footer&gt;</th>
+                        <th class="col">&lt;section&gt;</th>
+                    </tr>
+                    <tr class="row-border">
+                        <th class="col">&lt;audio&gt;</th>
+                        <th class="col">&lt;header&gt;</th>
+                        <th class="col">&lt;source&gt;</th>
+                    </tr>
+                    <tr class="row-border">
+                        <th class="col">&lt;canvas&gt;</th>
+                        <th class="col">&lt;hgroup&gt;</th>
+                        <th class="col">&lt;svg&gt;</th>
+                    </tr>
+                    <tr class="row-border">
+                        <th class="col">&lt;datalist&gt;</th>
+                        <th class="col">&lt;mark&gt;</th>
+                        <th class="col">&lt;time&gt;</th>
+                    </tr>
+                    <tr class="row-border">
+                        <th class="col">&lt;figure&gt;</th>
+                        <th class="col">&lt;nav&gt;</th>
+                        <th class="col">&lt;video&gt;</th>
+                    </tr>
+                </table>
+                <p class="normal-letters">These are just some of the new elements introduced in HTML5. We will be exploring each of these during this course.</p>
+            </div>
+            
+            <h1 class="bold-letters topic-header">Other New Features in HTML5</h1>
+            <ul>
+                <li>Built-in audio and video support (without plugins)</li>
+                <li>Enhanced form controls and attributes</li>
+                <li>The Canvas (a way to draw directly on a web page)</li>
+                <li>Drag and Drop functionality</li>
+                <li>Support for CSS3 (the newer and more powerful version of CSS)</li>
+                <li>More advanced features for web developers, such as data storage and offline applications.</li>
+            </ul>
+
+            <h1 class="bold-letters topic-header">First Look at HTML5</h1>
+            <p>Remember the DOCTYPE declaration from XHTML?</p>
+            
+            
+            <div class="bold-letters code-container">
+                <p>HTML5 is Fun!</p>
+                <div class="code">
+                    <p>&lt;!DOCTYPE html PUBLIC "
+                        -//W3C//DTD XHTML 1.0 Transitional//EN"
+                        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</p>
+                </div>
+            </div>
+            
+            <p>In HTML5, there is just one possible DOCTYPE declaration and it is simpler:</p>
+            <div class="bold-letters code-container">
+                <p>HTML5 is Fun!</p>
+                <div class="code">
+                    <p>&lt;!DOCTYPE html&gt;</p>
+
+                </div>
+            </div>
+
+            <p class="bold-letters">NOTE: <span class="normal-letters">The DOCTYPE tells the browser which type and version of document to expect. This should be the last time the
+                DOCTYPE is ever changed. From now on, all future versions of HTML will use this same simplified declaration.</span></p>
+
+            <p class="bold-letters">The &lt;head&gt; Section</p>
+            <p class="normal-letters">Here is a typical XHTML &lt;head&gt; section:</p>
+            <div class="bold-letters code-container">
+                <p>XHTML</p>
+                <div class="code">
+                    <p>
+                        &lt;head&gt;<br>
+                            &emsp;&lt;meta http-equiv="Content-type" content="text/html; charset=UTF-8" /&gt;<br>
+                            &emsp;&lt;title&gt; My First XHTML Page &lt;/title&gt;<br>
+                            &emsp;&lt;link rel="stylesheet" type="text/css" href="style.css" /&gt;<br>
+                        &lt;/head&gt;<br>
+                    </p>
+                </div>
+            </div>
+            
+            <p class="normal-letters">And the HTML5 version:</p>
+            <div class="bold-letters code-container">
+                <p>HTML5 is Fun!</p>
+                <div class="code">
+                    <p>
+                        &lt;head&gt;<br>
+                            &emsp;&lt;meta charset="utf-8"&gt;<br>
+                            &emsp;&lt;title&gt; My First HTML5 Page &lt;/title&gt;<br>
+                            &emsp;&lt;rel="stylesheet" href="style.css"&gt;<br>
+                        &lt;/head&gt;<br>
+                    </p>
+                </div>
+            </div>
+
+            <p class="normal-letters">Notice the simplified character set declaration, the shorter CSS stylesheet link text, and the removal of the trailing slashes
+                for these two lines.
+            </p>
+
+            <h1 class="bold-letters topic-header">Basic HTML5 Web Page</h1>
+            <p class="normal-letters">Putting the prior sections together, and now adding the &lt;body&gt; section and closing tags, 
+                we have our first complete web page in HTML5:
+            </p>
+            <div class="bold-letters code-container">
+                <p>HTML5 is Fun!</p>
+                <div class="code">
+                
+                    <p>
+                        &lt;!DOCTYPE html&gt;<br>
+                        &lt;html lang="en"&gt;<br>
+                        &lt;head&gt;<br>
+                            &emsp;&lt;meta charset="utf-8"&gt;<br>
+                            &emsp;&lt;title&gt; My First HTML5 Page &lt;/title&gt;<br>
+                            &emsp;&lt;rel="stylesheet" href="style.css"&gt;<br>
+                        &lt;/head&gt;<br>
+                        &lt;body&gt;<br>
+                            &emsp;&lt;p&gt;HTML5 is fun!&lt;/p&gt;<br>
+                        &lt;/body&gt;<br>
+                        &lt;/html&gt;
+                    </p>
+                </div>
+            </div>
+
+            <p class="bold-letters">Viewing the HTML5 Web Page</p>
+            <img src="html5sample.png" alt="HTML5 Web Page" class="img-fluid mb-4">
+
+            
+            <p class="bold-letters">HTML Page Structure</p>
+            <div class="border-main container-fluid div-center-contents mb-4">
+                <div class="div-size">
+                    &lt;HTML&gt;
+                </div>
+                <div class="border1 div-size div-center-contents">
+                    <div class="div-size">
+                        &lt;head&gt;
+                    </div>
+                    <div class="border2 div-size1">
+                        hello
+                    </div>
+                    <div class="div-size">
+                        &lt;/head&gt;
+                    </div>
+                </div>
+               
+                <div class="border1 div-size div-center-contents">
+                    <div class="div-size">
+                        &lt;body&gt;
+                    </div>
+                    <div class="border div-size1">
+                        <div class="border2">&lt;h1&gt;This is a heading&lt;/h1&gt;</div>
+                        <div class="border2">&lt;p&gt;This is a paragraph.&lt;p&gt;</div>
+                        <div class="border2">&lt;p&gt;This is another paragraph.&lt;p&gt;</div>
+                    </div>
+                    <div class="div-size">
+                        &lt;/body&gt;
+                    </div>
+                </div>
+                <div class="div-size">
+                    &lt;/HTML&gt;
+                </div>
+            </div>
+
+            <h1 class="bold-letters topic-header">&lt;!DOCTYPE html&gt;</h1>
+            <ul>
+                <li>
+                    <strong>&lt;!DOCTYPE html&gt;</strong>. The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML.
+                </li>
+                <li>
+                    This declaration defines that this document is an HTML5 document.
+                </li>
+                <li>
+                    <strong>&lt;html&gt;&lt;/html&gt;</strong> This element wraps all the content on the page. It is sometimes known as the root element.
+                </li>
+                <li>
+                    <strong>&lt;head&gt;&lt;/head&gt;</strong> This element acts as a container for everything you want to include on the HTML page, that isn't the content the page will show to viewers.
+                </li>
+                <li>
+                    <strong>&lt;meta charset="utf-8"&gt;</strong> This element specifies the character set for your document to UTF-8, which includes most characters from the vast majority of human written languages.
+                </li>
+                <li>
+                    <strong>&lt;title&gt;&lt;/title&gt;</strong> This sets the title of the page, which is the title that appears in the browser tab the page is loaded in.
+                    The page title is also used to describe the page when it is bookmarked.
+                </li>
+                <li>
+                    <strong>&lt;body&gt;&lt;/body&gt;</strong> This contains <strong>all</strong> the content that displays on the page, including text, images, videos, games, playable audio tracks, or whatever else.
+                </li>
+            </ul>
+            
+            <h1 class="topic-header"><strong>Four Key Concepts</strong></h1>
+            <ol>
+                <li>
+                    <strong><u>Elements</u></strong>: all HTML pages are made up of elements. Think of an element as a container in which a portion of a page is placed. Ex: <strong>&lt;h1&gt;Text Here&lt;/h1&gt;</strong>
+                </li>
+                <li>
+                    <strong><u>Tags</u></strong>: is an HTML codes that are enclosed in angle brackets and are used to format the text. Ex: <strong>&lt;p&gt;</strong>
+                    <ul>
+                        <li>Often elements and tags are used interchangeably.</li>
+                        <li>An element is made up of two tags: an opening tag and a closing tag.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong><u>Attributes and Values</u></strong>:
+                    <ul>
+                        <li>
+                            Attribute is used to define the characteristics of an element and is placed inside the element's opening tag.
+                            <br>
+                            Ex: <strong>align</strong> attribute of paragraph.
+                            <br>
+                            <strong>&lt;p align="value"&gt;This is a paragraph&lt;/p&gt;</strong>
+                        </li>
+                        <li>
+                            Values work together with attributes to complete the definition of an element's characteristics.
+                            <ul>
+                                <li>An attribute names a characteristic; a value describes it.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong>NOTE:</strong> Not all attributes and values work together with all elements. If you include a <strong>color</strong> attribute in the paragraph <strong>&lt;p&gt;</strong> element above, the browser will ignore it.</p>
+                    <p><strong>Tip:</strong> Always enclose your values in quotation marks.</p>
+                </li>
+                <li>
+                    <strong><u>Nesting</u></strong>:
+                    <ul>
+                        <li>Often, you will want to apply more than one element to a portion of your page.</li>
+                        <li>Nesting simply means that elements must never overlap.</li>
+                        <li>
+                            Although HTML can be pretty forgiving if your elements are not properly nested, if you overlap elements when you are working on more complicated constructions such as frames or tables, your page might not display properly. Ex: <strong>&lt;p align="center"&gt;&lt;h1&gt;Incorrect&lt;/p&gt;&lt;/h1&gt;</strong>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h1 class="topic-header"><strong>Empty HTML Elements</strong></h1>
+            <ul>
+                <li>HTML elements with no content are called empty elements.</li>
+                <li>&lt;br&gt; is an empty element without a closing tag (the &lt;br&gt; tag defines a line break)</li>
+            </ul>
+
+            <h1 class="topic-header"><strong>HTML is Not Case Sensitive</strong></h1>
+            <ul>
+                <li>HTML tags are not case sensitive: &lt;P&gt; means the same as &lt;p&gt;.</li>
+                <li>The HTML5 standard does not require lowercase tags, but W3C recommends lowercase in HTML, and
+                    demands lowercase for stricter document types like XHTML.</li>
+            </ul>
+
+            <h1 class="topic-header"><strong>Add Comments to your HTML document</strong></h1>
+            <ul>
+                <li>Comments function as little notes to yourself.</li>
+                <li>Comments are represented through: <strong>&lt;!--Add your Comment Here--&gt;</strong></li>
+                <li>Comments are not displayed in the browser; they are sometimes called non printing lines.</li>
+            </ul>
+
+            <h1 class="topic-header"><strong>HTML5 Semantic Elements</strong></h1>
+            <ul>
+                <li>Semantics is the study of the meanings of words and phrases in a language.</li>
+                <li>Semantic elements = elements with a meaning.</li>
+                <li>A semantic element clearly describes its meaning to both the browser and the developer.</li>
+                <li>Examples of non-semantic elements: <strong>&lt;div&gt;</strong> and <strong>&lt;span&gt;</strong> - Tells nothing about its content.</li>
+                <li>Examples of semantic elements: <strong>&lt;form&gt;</strong>, <strong>&lt;table&gt;</strong>, and <strong>&lt;article&gt;</strong> - Clearly defines its content.</li>
+                <li>Many web sites contain HTML code like:
+                    <p class="example-code">
+                        &emsp;&lt;div id="nav"&gt;<br>
+                        &emsp;&lt;div class="header"&gt;<br>
+                        &emsp;&lt;div id="footer"&gt; to indicate navigation, header, and footer.
+                    </p>
+                    
+                </li>
+                <li>HTML5 offers new semantic elements to define different parts of a web page:
+                    <ul>
+                        <li><strong>&lt;article&gt;</strong></li>
+                        <li><strong>&lt;aside&gt;</strong></li>
+                        <li><strong>&lt;details&gt;</strong></li>
+                        <li><strong>&lt;figcaption&gt;</strong></li>
+                        <li><strong>&lt;figure&gt;</strong></li>
+                        <li><strong>&lt;footer&gt;</strong></li>
+                        <li><strong>&lt;header&gt;</strong></li>
+                        <li><strong>&lt;main&gt;</strong></li>
+                        <li><strong>&lt;mark&gt;</strong></li>
+                        <li><strong>&lt;nav&gt;</strong></li>
+                        <li><strong>&lt;section&gt;</strong></li>
+                        <li><strong>&lt;summary&gt;</strong></li>
+                        <li><strong>&lt;time&gt;</strong></li>
+                    </ul>
+                </li>
+                <div class="border mb-4">
+                    <table>
+                        <tbody>
+                            <tr class="bg-success">
+                                <th colspan="2" class="border">&lt;header&gt;</th>
+                            </tr>
+                            <tr class="bg-info">
+                                <td colspan="2" class="border">&lt;nav&gt;</td>
+                            </tr>
+                            <tr>
+                                <td class="border bg-primary">&lt;section&gt;</td>
+                                <td rowspan="2" class="border bg-dark">&lt;aside&gt;</td>
+                            </tr>
+                            <tr>
+                                <td class="border bg-danger">&lt;article&gt;</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="border bg-white text-black">&lt;footer&gt;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <li><strong>HTML5 &lt;section&gt; Element</strong></li>
+                <ul>
+                    <li>The <strong>&lt;section&gt;</strong> element defines a section in a document.</li>
+                    <li>According to W3C's HTML5 documentation: "A section is a thematic grouping of content, typically with a heading."</li>
+                    <li>A home page could normally be split into sections for introduction, content, and contact information.</li>
+                </ul>
+                <div class="bold-letters code-container mb-4">
+                    <p>Section Element</p>
+                    <div class="code">
+                    
+                        <p>
+                            &lt;section&gt;<br>
+                            &emsp;&lt;h1&gt;WWF&lt;/h1&gt;<br>
+                            &emsp;&lt;p&gt;The World Wide Fund for Nature (WWF) is....&lt;/p&gt;<br>
+                            &lt;/section&gt;<br>
+                        </p>
+                    </div>
+                </div>
+                <li><strong>HTML5 &lt;article&gt; Element</strong></li>
+                <ul>
+                    <li>The <strong>&lt;article&gt;</strong> element specifies independent, self-contained content.</li>
+                    <li>An article should make sense on its own, and it should be possible to read it independently from the rest of the web site.</li>
+                    <li>Examples of where an <strong>&lt;article&gt;</strong> element can be used:
+                        <ul>
+                            <li>Forum post</li>
+                            <li>Blog post</li>
+                            <li>Newspaper article</li>
+                        </ul>
+                    </li>
+                    <div class="bold-letters code-container mb-4">
+                        <p>Article Element</p>
+                        <div class="code">
+                        
+                            <p>
+                                &lt;article&gt;<br>
+                                    &emsp;&lt;h1&gt;What Does WWF Do?&lt;/h1&gt;<br>
+                                    &emsp;&lt;p&gt;WWF's mission is to stop the degradation of our planet's ....&lt;/p&gt;<br>
+                                &lt;/article&gt;<br>
+                            </p>
+                        </div>
+                    </div>
+                    <li>You will also find pages with <strong>&lt;section&gt;</strong> elements containing <strong>&lt;section&gt;</strong> elements, and <strong>&lt;article&gt;</strong> elements containing <strong>&lt;article&gt;</strong> elements.</li>
+                <li>Example for a newspaper:</li>
+                <ul>
+                    <li>The sport <strong>&lt;article&gt;</strong> in the sport <strong>&lt;section&gt;</strong>, may have a technical <strong>&lt;section&gt;</strong> in each <strong>&lt;article&gt;</strong>.</li>
+                </ul>
+                </ul>
+              
+                <li class="mt-4"><strong>HTML5 &lt;header&gt; Element</strong></li>
+                <ul>
+                    <li>The <strong>&lt;header&gt;</strong> element specifies a header for a document or section.</li>
+                    <li>The <strong>&lt;header&gt;</strong> element should be used as a container for introductory content.</li>
+                    <li>You can have several <strong>&lt;header&gt;</strong> elements in one document.</li>
+                </ul>
+                <div class="bold-letters code-container mb-4">
+                    <p>Header Element</p>
+                    <div class="code">
+                    
+                        <p>
+                            &lt;article&gt;<br>
+                                &emsp;&lt;header&gt;<br>
+                                    &emsp;&emsp;&lt;h1&gt;What is aBook?&lt;/h1&gt;<br>
+                                    &emsp;&emsp;&lt;p&gt;Bookp&lt;/p&gt;<br>
+                                &emsp;&lt;/header&gt;<br>
+                                &emsp;&lt;p&gt;A book is...&lt;/p&gt;<br>
+                            &lt;/article&gt;<br>
+                        </p>
+                    </div>
+                </div>
+                
+                <li><strong>HTML5 &lt;footer&gt; Element</strong></li>
+                <ul>
+                    <li>The <strong>&lt;footer&gt;</strong> element specifies a footer for a document or section.</li>
+                    <li>A <strong>&lt;footer&gt;</strong> element should contain information about its containing element.</li>
+                    <li>A footer typically contains the author of the document, copyright information, links to terms of use, contact information, etc.</li>
+                    <li>You may have several <strong>&lt;footer&gt;</strong> elements in one document.</li>
+                </ul>
+                <div class="bold-letters code-container mb-4">
+                    <p>Footer Element</p>
+                    <div class="code">
+                        <p>
+                            &lt;footer&gt;<br>
+                                &emsp;&lt;p&gt;Posted by: Hege Refsnes&lt;/p&gt;<br>
+                                &emsp;&lt;p&gt;Contact information: 
+                                <br>&emsp;&emsp;&lt;a href="mailto:someone@example.com"&gt;<br>&emsp;&emsp;someone@example.com&lt;/a&gt;.&lt;/p&gt;<br>
+                                &lt;/footer&gt;
+                        </p>
+                    </div>
+                </div>
+
+                <li><strong>HTML5 &lt;nav&gt; Element</strong></li>
+                <ul>
+                    <li>The <strong>&lt;nav&gt;</strong> element defines a set of navigation links.</li>
+                    <li>Notice that NOT all links of a document should be inside a <strong>&lt;nav&gt;</strong> element. The <strong>&lt;nav&gt;</strong> element is intended only for major block of navigation links.</li>
+                </ul>
+                <div class="bold-letters code-container mb-4">
+                    <p>Nav Element</p>
+                    <div class="code">
+                        <p>
+                            &lt;nav&gt;<br>
+                                &emsp;&lt;a href="/html/"&gt;HTML&lt;/a&gt;<br>
+                                &emsp;&lt;a href="/css/"&gt;CSS&lt;/a&gt;<br> 
+                                &emsp;&lt;a href="/js/"&gt;JavaScript&lt;/a&gt;<br> 
+                                &emsp;&lt;a href="/jquery/"&gt;jQuery&lt;/a&gt;<br>
+                            &lt;/nav&gt;
+
+                        </p>
+                    </div>
+                </div>
+
+
+                <li><strong>HTML5 &lt;aside&gt; Element</strong></li>
+                <ul>
+                    <li>The <strong>&lt;aside&gt;</strong> element defines some content aside from the content it is placed in (like a sidebar).</li>
+                    <li>The <strong>&lt;aside&gt;</strong> content should be related to the surrounding content.</li>
+                </ul>
+                <div class="bold-letters code-container mb-4">
+                    <p>Aside Element</p>
+                    <div class="code">
+                        <p>
+                            &lt;aside&gt;<br>
+                                &emsp;&lt;h4&gt;Book&lt;/h4&gt;<br>
+                                &emsp;&lt;h4&gt;Book&lt;/h4&gt;<br> 
+                            &lt;/aside&gt;
+
+                        </p>
+                    </div>
+                </div>
+
+                <li><strong>HTML5 &lt;figure&gt; and &lt;figcaption&gt; Elements</strong></li>
+                <ul>
+                    <li>The purpose of a figure caption is to add a visual explanation to an image.</li>
+                    <li>In HTML5, an image and a caption can be grouped together in a <strong>&lt;figure&gt;</strong> element.</li>
+                    <li>The <strong>&lt;img&gt;</strong> element defines the image, the <strong>&lt;figcaption&gt;</strong> element defines the caption.</li>
+                </ul>
+                <div class="bold-letters code-container mb-4">
+                    <p>Figure and Figcaption Elements</p>
+                    <div class="code">
+                        <p>
+                            &lt;figure&gt;<br>
+                                &emsp;&lt;img src="panda.png" alt="Panda"&gt;<br>
+                                &emsp;&lt;figcaption&gt;Fig1. - This is Panda.&lt;/figcaption&gt;<br> 
+                            &lt;/figure&gt;
+
+                        </p>
+                    </div>
+                </div>
+            </ul>
+
+            <h1 class="topic-header"><strong>Removed Elements in HTML5</strong></h1>
+            <ul>
+                <li>The following HTML4 elements have been removed in HTML5:</li>
+            </ul>
+            <table class="bold-letters mb-4">
+                <tr class="border bg-dark">
+                    <th class="border">Removed Element</th>
+                    <th class="border">Use Instead</th>
+                </tr>
+                
+                <tr class="border">
+                    <td class="border">&lt;acronym&gt;</td>
+                    <td class="border">&lt;abbr&gt;</td>
+                </tr>
+                <tr class="border">
+                    <td class="border">&lt;applet&gt;</td>
+                    <td class="border">&lt;object&gt;</td>
+                </tr>
+                <tr class="border">
+                    <td class="border">&lt;basefont&gt;</td>
+                    <td class="border">CSS</td>
+                </tr>
+                <tr class="border">
+                    <td class="border">&lt;big&gt;</td>
+                    <td class="border">CSS</td>
+                </tr>
+                <tr class="border">
+                    <td class="border">&lt;center&gt;</td>
+                    <td class="border">CSS</td>
+                </tr>
+                <tr class="border">
+                    <td class="border">&lt;dir&gt;</td>
+                    <td class="border">&lt;ul&gt;</td>
+                </tr>
+                <tr class="border">
+                    <td class="border">&lt;font&gt;</td>
+                    <td class="border">CSS</td>
+                </tr>
+                <tr class="border">
+                    <td class="border">&lt;frame&gt;</td>
+                    <td class="border"></td>
+                </tr>
+                <tr class="border">
+                    <td class="border">&lt;frameset&gt;</td>
+                    <td class="border"></td>
+                </tr>
+                <tr class="border">
+                    <td class="border">&lt;noframes&gt;</td>
+                    <td class="border"></td>
+                </tr>
+                <tr class="border">
+                    <td class="border">&lt;strike&gt;</td>
+                    <td class="border">CSS, &lt;s&gt;, or &lt;del&gt;</td>
+                </tr>
+                <tr class="border">
+                    <td class="border">&lt;tt&gt;</td>
+                    <td class="border">CSS</td>
+                </tr>
+               
+            </table>
+
+            <h1 class="topic-header"><strong>Last but not the least!</strong></h1>
+            <ul>
+                <li><strong>Saving your pages</strong>
+                    <ul>
+                        <li>You can save the file with .html file extension.</li>
+                        <li>.htm or .html?</li>
+                    </ul>
+                </li>
+                <li><strong>Viewing your pages</strong>
+                    <ul>
+                        <li>Your web page will look take the icon of your default browser.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h1 class="topic-header"><strong>Controlling Text and Text Flows</strong></h1>
+
+            <p class="bold-letters">Designate Headings with &lt;h#&gt;&lt;/h#&gt;</p>
+            <ul>
+                <li>The purpose of the heading element is to indicate different heading levels in a document.</li>
+                <li>The tags are made up of h with a level of 1-6 following it. One(1) will be the largest and six(6) will be the smallest.</li>
+            </ul>
+            <div class="bold-letters code-container mb-4">
+                <p>Header</p>
+                <div class="code">
+                    <p>
+                        &lt;h1&gt;Heading 1&lt;/h1&gt;<br>
+                        &lt;h2&gt;Heading 2&lt;/h2&gt;<br>
+                        &lt;h3&gt;Heading 3&lt;/h3&gt;<br>
+                        &lt;h4&gt;Heading 4&lt;/h4&gt;<br>
+                        &lt;h5&gt;Heading 5&lt;/h5&gt;<br>
+                        &lt;h6&gt;Heading 6&lt;/h6&gt;
+
+                    </p>
+                </div>
+            </div>
+
+            <p class="bold-letters">Insert Ruler Lines with &lt;hr&gt;</p>
+            <ul>
+                <li>The horizontal rule element, &lt;hr&gt;, will draw a horizontal line wherever you place it.</li>
+                <li>The &lt;hr&gt; element is used to separate content (or define a change) in an HTML page.</li>
+            </ul>
+            <div class="bold-letters code-container mb-4">
+                <p>Horizontal Rule</p>
+                <div class="code">
+                    <p>
+                        &lt;hr&gt;
+
+                    </p>
+                </div>
+            </div>
+
+            <p class="bold-letters">Control Text with Character Elements</p>
+            <ul>
+                <li>The character elements give you some basic controls over how text will display on a Web browser.</li>
+                <li>Physical elements describe the physical appearance of the characters. <br>
+                    Ex: <strong>&lt;b&gt;A bold text&lt;/b&gt;</strong></li>
+                <li>Elements that derive their names from the intended function or purpose of the text is called Logical Element. <br>
+                    Ex: <strong>&lt;strong&gt;A strong text&lt;/strong&gt;</strong>
+                </li>
+                <li>This element will display bold typeface, but the element’s name stands for strongly emphasized text.</li>
+            </ul>
+
+            <p class="bold-letters">Display Italicized Text</p>
+            <ul>
+                <li><strong>&lt;i&gt;&lt;/i&gt;</strong> The italics element is a physical element for displaying italicized text.</li>
+                <li><strong>&lt;em&gt;&lt;/em&gt;</strong> The emphasis element is a logical element for emphasizing important portions of a document.</li>
+                <li><strong>&lt;cite&gt;&lt;/cite&gt;</strong> The citation element identifies a portion of your document as a reference to an outside source.</li>
+                <li><strong>&lt;var&gt;&lt;/var&gt;</strong> The logical element indicates a variable, as might be used in computer code.</li>
+                <li><strong>&lt;dfn&gt;&lt;/dfn&gt;</strong> This logical element identifies a portion of text as defining instance of a term.</li>
+                <li><strong>&lt;address&gt;&lt;/address&gt;</strong> To set apart your address or personal information at the bottom of a Web page. This element also generally adds a line break before and after the address.</li>
+            </ul>
+
+            <p class="bold-letters">Display Boldface Text</p>
+            <ul>
+                <li><strong>&lt;b&gt;&lt;/b&gt;</strong> The bold element is a physical element that allows you to render boldface text.</li>
+                <li><strong>&lt;strong&gt;&lt;/strong&gt;</strong> The strong also displays in bold. This logical element indicates a heavier or stronger emphasis than does <strong>&lt;b&gt;</strong>, but there is usually no difference in how the two look in the browser.</li>
+            </ul>
+
+            <p class="bold-letters">Display Highlighted Text</p>
+            <ul>
+                <li><strong>&lt;mark&gt;&lt;/mark&gt;</strong> element defines marked/highlighted text</li>
+            </ul>
+
+            <p class="bold-letters">Display Deleted Text</p>
+            <ul>
+                <li><strong>&lt;del&gt;&lt;/del&gt;</strong> element defines deleted/removed text</li>
+            </ul>
+
+            <p class="bold-letters">Create Superscripts and Subscripts</p>
+            <ul>
+                <li><strong>&lt;sup&gt;&lt;/sup&gt;</strong> This element creates a superscript</li>
+                <li><strong>&lt;sub&gt;&lt;/sub&gt;</strong> This element forces text to display as a subscript.</li>
+            </ul>
+
+            <p class="bold-letters">Display Monospaced Text</p>
+            <ul>
+                <li><strong>&lt;code&gt;&lt;/code&gt;</strong> This logical element not only displays in a courier, fixed width-font font, but also indicates that the text is a portion of computer code.</li>
+                <li><strong>&lt;kbd&gt;&lt;/kbd&gt;</strong> Standing for keyboard, this logical element identifies its contents as keyboard input.</li>
+                <li><strong>&lt;samp&gt;&lt;/samp&gt;</strong> This is another logical element. It describes its content as sample output, most often rendering text in monospaced font.</li>
+            </ul>
+
+            <p class="bold-letters">Display Underlined Text</p>
+            <ul>
+                <li><strong>&lt;u&gt;&lt;/u&gt;</strong> The underline element will render text with a line underneath.</li>
+                <li><strong>&lt;ins&gt;&lt;/ins&gt;</strong> The inserted text element is a logical element that indicates text that has been inserted since the document was written.</li>
+            </ul>
+
+            <p class="bold-letters">Control Text Flow</p>
+            <ul>
+                <li>Indents, Paragraph Breaks and Line spacing is a main consideration when building a web site.</li>
+            </ul>
+
+            <p class="bold-letters">Create Line Breaks with &lt;br /&gt; and Paragraphs with &lt;p&gt;</p>
+            <ul>
+                <li>The difference between the line break and the paragraph elements is that...when you use <strong>&lt;br&gt;</strong> you're telling a browser to insert a line break and go to the next line.</li>
+                <li>The <strong>&lt;p&gt;</strong> element on the other hand, will add a blank line before it starts your new paragraph.</li>
+            </ul>
+
+            <p class="bold-letters">Indent Text</p>
+            <ul>
+                <li>When you want indent text in a word processor, just press the TAB key.</li>
+                <li>In HTML, it's NOT that SIMPLE. Web browsers ignore normal text formatting instructions; you have to be creative to indent text.</li>
+            </ul>
+
+            <p class="bold-letters">Use &amp;nbsp; to add spaces</p>
+            <ul>
+                <li>The non-breaking space entity (<strong>&amp;nbsp;</strong>) will instruct a browser to add spaces wherever you want them.</li>
+                <li>It is most commonly used to create an indent at the beginning of a paragraph.</li>
+                <li>If you want to have a five-space indent at the beginning of the paragraph, type five nonbreaking space entities at the beginning of the line you want to indent.</li>
+            </ul>
+
+            <p class="bold-letters">HTML Entities</p>
+            <ul>
+                <li>Are reserved characters in HTML. A character entity looks like this: 
+                    <br><strong>&entity_name;</strong> or <strong>&#entity_name;</strong></li>
+            </ul>
+
+            <p class="bold-letters">Common HTML Entities</p>
+            <table class="bold-letters mb-4">
+                
+                <tr class="border bg-dark p-0">
+                    <th class="border">Result</th>
+                    <th class="border">Description</th>
+                    <th class="border">Entity Name</th>
+                </tr>
+            
+                <tr class="border">
+                    <td class="border"> </td>
+                    <td class="border">non-breaking space</td>
+                    <td class="border">&amp;nbsp;</td>
+                </tr>
+                <tr class="border">
+                    <td class="border">&lt;</td>
+                    <td class="border">less than</td>
+                    <td class="border">&amp;lt;</td>
+                </tr>
+                <tr class="border">
+                    <td class="border">&gt;</td>
+                    <td class="border">greater than</td>
+                    <td class="border">&amp;gt;</td>
+                </tr>
+                <tr class="border">
+                    <td class="border">&amp;</td>
+                    <td class="border">ampersand</td>
+                    <td class="border">&amp;amp;</td>
+                </tr>
+                <tr class="border">
+                    <td class="border">"</td>
+                    <td class="border">double quotation mark</td>
+                    <td class="border">&amp;quote;</td>
+                </tr>
+                <tr class="border">
+                    <td class="border">'</td>
+                    <td class="border">single quotation mark (apostrophe)</td>
+                    <td class="border">&amp;apos;</td>
+                </tr>
+                <tr class="border">
+                    <td class="border">©</td>
+                    <td class="border">copyright</td>
+                    <td class="border">&amp;copy;</td>
+                </tr>
+                <tr class="border">
+                    <td class="border">®</td>
+                    <td class="border">registered trademark</td>
+                    <td class="border">&amp;reg;</td>
+                </tr>
+                <tr class="border">
+                    <td class="border">/</td>
+                    <td class="border">forward slash</td>
+                    <td class="border">&amp;#47;</td>
+                </tr>
+                
+             </table>
+
+             <p class="bold-letters">Use &lt;blockquote&gt; to Indent a Large Block</p>
+             <ul>
+                <li>If you want to indent everything from the left margin, the easiest way to do it is to use the &lt;blockquote&gt; element.</li>
+                <li>Keep in mind that when you enclose your text in this element, you will instruct the browser to indent the margins from both sides.</li>
+            </ul>
+            <div class="bold-letters code-container mb-4">
+                <p>Blockquote</p>
+                <div class="code">
+                    <p>
+                        &lt;blockquote&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;This is an indented block of text.<br>
+                        &lt;/blockquote&gt;
+
+                    </p>
+                </div>
+            </div>
+
+            <p class="bold-letters">Retain Text Formatting with &lt;pre&gt;&lt;/pre&gt;</p>
+            <ul>
+                <li>By using the preformatted text element, you can tell a browser to display your text exactly as you entered it.</li>
+                <li>The downside of this element is that the browser will display the text in a typewriter-style monospaced font.</li>
+                <li>But this could be overridden and instruct the browser to use a different font format.</li>
+            </ul>
+            <div class="bold-letters code-container mb-4">
+                <p>Preformatted</p>
+                <div class="code">
+                    <p>
+                        &lt;pre&gt;<br>
+                        This text will<br>
+                        &nbsp;&nbsp;&nbsp;retain its<br>
+                        formatting.<br>
+                        &lt;/pre&gt;
+
+                    </p>
+                </div>
+            </div>
+
+            <p class="bold-letters">Position and Align Text</p>
+            <ul>
+                <li>The align attribute used with many elements, will allow you to position text (or images) at the left, center or right of a page.</li>
+                <li>In the case of paragraph, justify is added in the list of text positioning.</li>
+                <li>To see how it works try this: &lt;p align="right"&gt;Text&lt;/p&gt;</li>
+            </ul>
+            <div class="bold-letters code-container mb-4">
+                <p>Align</p>
+                <div class="code">
+                    <p>
+                        &lt;p align="right"&gt;This text will be right-aligned.&lt;/p&gt;<br>
+                        &lt;p align="center"&gt;This text will be centered.&lt;/p&gt;<br>
+                        &lt;p align="left"&gt;This text will be left-aligned.&lt;/p&gt;
+
+                    </p>
+                </div>
+            </div>
+
+            <p class="bold-letters">NOTE!</p>
+            <ul>
+                <li>When using the align attribute, it's often not necessary to specify "left" alignment, as the browser usually defaults to this arrangement anyway.</li>
+                <li>There are exceptions though, so always check to see how your pages display.</li>
+            </ul>
+
+            <div class="empty-space"></div>
+
+            <p>References:</p>
+            <ul>
+                <li>Jenkins, S. (2013). Web Design All-in-One for Dummies. John Wiley & Sons.</li>
+                <li>Parker, J. (2021). HTML for Beginners: A Complete Beginners Guide to Learn Html in 1 Hour and Master Your
+                    Web Designing.</li>
+                
+                <li>W3Schools online web tutorials. (n.d.). https://www.w3schools.com/</li>
+            </ul>
+        </div>
+        
+    </div>
+    
+
+    <div class="empty-space2"></div>
+
+    <div class="container-fluid p-0">
+        <div class="container-fluid w-75 grid-container bottom-nav hide-bottom-nav border-design background-color font-responsive p-0">
+            <div><a href="#" class="glow-link">PREVIOUS</a></div>
+            <div>LECTURE 2</div>
+            <div><a href="#" class="glow-link">NEXT</a></div>
+        </div>
+      </div>
+
+      <div class="container-fluid p-0">
+        <div class="container-fluid w-75 grid-container border-design background-color font-responsive p-0">
+          <div><a href="#" class="glow-link">PREVIOUS</a></div>
+          <div>LECTURE 2</div>
+          <div><a href="#" class="glow-link">NEXT</a></div>
+        </div>
+      </div>
+
+      <script>
+        const bottomNav = document.querySelector('.bottom-nav');
+      
+        window.addEventListener('scroll', () => {
+          const scrollY = window.scrollY;
+          const winHeight = window.innerHeight;
+          const docHeight = document.documentElement.scrollHeight;
+      
+          // show nav only when scroll is in the middle
+          if (scrollY > 100 && scrollY + winHeight < docHeight - 50) {
+            bottomNav.style.transform = 'translateY(0)';
+          } else {
+            bottomNav.style.transform = 'translateY(100%)';
+          }
+        });
+      </script>
+
+
+
+</body>
+</html>

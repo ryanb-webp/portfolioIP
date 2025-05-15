@@ -1,0 +1,110 @@
+body {
+    background-image: url("bg1.webp");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-bar {
+    height: clamp(20px, 9vw, 100px);
+}
+
+/* 🧠 Scroll & hover behavior */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+    margin-top: 0vw;
+    transition: top 0.3s ease-in-out;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5); /* keep visible background */
+}
+
+/* When scrolling down */
+.hide-nav {
+    top: -120px;
+}
+
+/* Show nav when hovered */
+nav:hover {
+    top: 0 !important;
+}
+
+nav img {
+    width: 10vw;
+    height: 3.5vw;
+    max-width: 10vw;
+    margin-top: 1vw;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: black;
+    text-decoration: none;
+    text-shadow: 0 0 8px #00ffff, 0 0 16px #00ffff;
+    color: white; /* Optional: match glow color */
+}
+
+#header {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: clamp(10px, 5vw, 40px);
+    justify-content: center;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: clamp(4px, 1vw, 24px);
+}
+
+#header li {
+    position: relative;
+    padding: 10px;
+}
+
+#nav-button {
+    margin-top: clamp(10px, 2vw, 40px);
+}
+
+
+
+/* Dropdown */
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid white;
+    background-color: gray;
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content1 a {
+    color: white;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content1 a:hover {
+    background-color: #ddd;
+}
+
+/* Show dropdown on hover */
+#header li:hover .dropdown-content1 {
+    display: block;
+}
+
+.empty-space {
+    margin-top: 10vw;
+}
